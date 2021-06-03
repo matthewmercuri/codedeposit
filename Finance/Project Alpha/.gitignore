@@ -1,0 +1,4 @@
+.vscode/
+venv/
+ProjectAlpha/__pycache__
+ProjectAlpha/.env

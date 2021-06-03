@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>numbled. | {{ page_title }}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.svg') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}?v=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}?v=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='blog.css') }}?v=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='post.css') }}?v=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}?v=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <!-- <div id="nav-shadow"></div> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176291785-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-176291785-1');
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">
+            <img id="nav-logo" src="{{ url_for('static', filename='typelogov2_onwhite.svg') }}" href="{{ url_for('home') }}">
+        </a>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('blog') }}">Blog</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="burger-layer-1"></div>
+            <div class="burger-layer-2"></div>
+            <div class="burger-layer-3"></div>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+<!-- <footer><p>Copyright 2020 - numbled.</p></footer> -->
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}?v=1.0"></script>
+</html>

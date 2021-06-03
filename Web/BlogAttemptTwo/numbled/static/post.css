@@ -1,0 +1,62 @@
+article {
+    width: 66vw;
+    line-height: 1.6;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+
+article h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0rem;
+    text-align: left;
+    width: 80%;
+    line-height: 1.0;
+    color: var(--accent-color)
+}
+
+.info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 1rem 0rem;
+}
+
+.info-section {
+    display: flex;
+    margin-bottom: 0.2rem;
+}
+
+.info-section p {
+    margin-bottom: 0rem;
+}
+
+.tags {
+    margin-right: 0.5rem;
+    background-color: gainsboro;
+    padding: 0rem 0.2rem;
+    border-radius: 3px;
+}
+
+.info-section img {
+    transform: scale(1.25);
+    margin-right: 0.5rem;
+}
+
+ul {
+    list-style-position: inside;
+    margin: 0.5rem 0rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px){
+    article {
+        width: 100vw;
+    }
+
+    article h1 {
+        width: 100%;
+    }
+}

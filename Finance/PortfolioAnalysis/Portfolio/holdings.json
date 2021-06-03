@@ -1,0 +1,18 @@
+{
+    "holdings":{
+        "AAPL":{
+            "costbasis":158.00,
+            "shares":20,
+            "currency": "USD"
+        },
+        "AMD":{
+            "costbasis":9.79,
+            "shares":100,
+            "currency":"USD"
+        }
+    },
+    "cash":{
+        "CAD":100.39,
+        "USD":76.29
+    }
+}

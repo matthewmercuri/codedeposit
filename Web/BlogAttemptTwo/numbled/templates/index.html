@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="main-feature">
+        <div class="main-feature-card" style="background-image: url('{{ feature.featureImg }}');">
+            <div class="feature-post">
+                <h1>{{ feature.title }}</h1>
+                <a class="read-more-btn" href="{{ url_for('post_page', postid=(feature._id))}}">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div class="welcome">
+        <h1>humbled by numbers</h1>
+        <img src="{{ url_for('static', filename='assets/dsmonitor.svg') }}">
+    </div>
+    <div class="recent-posts">
+    {% for rp in recent_posts %}
+        <div class="recent-post-card">
+            <img src="{{ rp.featureImg }}" alt="This is the article's featured image.">
+            <h2>{{ rp.title }}</h2>
+            <a href="#">Read More</a>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <article>
+        <h1>{{ post.title }}</h1>
+        <div class="info">
+            <div class="info-section">
+                <img class="calendar-icon" src="{{ url_for('static', filename='assets/calendar.svg') }}">
+                <p>{{ post.date }}</p>
+            </div>
+            <div class="info-section">
+                {% if post.author %}
+                <img class="person-icon" src="{{ url_for('static', filename='assets/person.svg') }}">
+                    <p>{{ post.author }}</p>
+                {% endif %}    
+            </div>
+            <div class="info-section">
+                {% if post.tags %}
+                <img class="tag-icon" src="{{ url_for('static', filename='assets/tag.svg') }}">
+                    {% for tag in post.tags %}
+                    <p class="tags">{{ tag }} </p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {{post.post | safe}}
+    </article>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="blog-container">
+        {% for post in posts %}
+        <div class="post-card-base" style="background-image: url('{{ post.featureImg }}')">
+            <div class="post-card">
+                <h1>{{ post.title }}</h1>
+                <a href="{{ url_for('post_page', postid=(post._id))}}">Read More</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

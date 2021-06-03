@@ -1,0 +1,73 @@
+.main-feature {
+    display: flex;
+    height: 30vh;
+    width: 66vw;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../static/assets/operatorsbg5.svg');
+    background-size: cover;
+    flex-wrap: wrap-reverse;
+    margin-top: 10px;
+    box-shadow: 0px 5px 10px 1px;
+    /*background-repeat: no-repeat;*/
+}
+
+#monitor {
+    width: 20%;
+    min-width: 200px;
+    margin-right: 3%;
+    animation-name: dsmon;
+    animation-duration: 1s;
+    /*box-shadow: 3px;*/
+}
+
+@keyframes dsmon {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+#slogan-text {
+    color: white;
+    font-weight: 700;
+    font-size: 3em;
+    text-shadow: 0px 1px 5px black;
+    margin-right: 3%;
+    margin-left: 3%;
+    animation-name: slogan;
+    animation-duration: 1s;
+    /*text-shadow: 2px 2px 8px black;*/
+}
+
+@keyframes slogan {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #monitor {
+        /*display: none;*/
+    }
+
+    #slogan-text {
+        font-size: 2em;
+    }
+
+    .main-feature {
+        width: 100%;
+        margin-top: 0px;
+    }
+}
