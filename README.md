@@ -1,6 +1,6 @@
 Code Deposit
 ---
-### This repository holds code going back for a few years that is not never made it into formal projects. You will also find single purpose code snippets alonside small and incomplete projects.
+### This repository holds code going back for a few years that has not been polished or made into formal projects. You will also find single purpose code snippets alongside small and incomplete projects.
 </br>
 
 ## Finance
